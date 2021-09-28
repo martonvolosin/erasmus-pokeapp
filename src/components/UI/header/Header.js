@@ -8,7 +8,7 @@ function Header() {
 
     return (
         <div className='wrap'>
-            <img src={logo} className='logo'></img>
+            <img src={logo} className='logo' alt='Pokemon logo'/>
             <a href='https://pokeapi.co/docs/v2' className='document'>PokeApi Documentation</a>
         </div>
     );
