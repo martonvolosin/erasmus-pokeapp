@@ -1,0 +1,23 @@
+.dropdown {
+    color: grey;
+    border: 1cm;
+    border-color: blue;
+}
+.something {
+    width: 250px;
+    height: 35px;
+    border: 1px rgb(199, 199, 199) solid;
+    border-radius: 5px;
+}
+
+.something:hover {
+    border: 1px rgb(100,100,100) solid;
+}
+.something option:nth-child(even){
+    color:blue;
+
+}
+
+.something option {
+    font-weight: bold;
+}
