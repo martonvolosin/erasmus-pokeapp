@@ -1,14 +1,20 @@
 /**
- * 
+ * This dropdown filtres different types of pokemons.
  */
  import './PokeType.css';
  
- function PokeType () {
+ function PokeType (props) {
+ 
+     function typeSelect(event) {
+ 
+         props.typeChange(event.target.value);
+     };
+ 
      return (
      <div className="dropdown">
          <br />
          <p>Pokemon types</p>
-         <select className="something" value='All'>
+         <select className="something" value={props.selected} onChange={typeSelect}>
              <option value='All'>All types</option>
              <option value='Water'>Water</option>
              <option value='Air'>Air</option>
