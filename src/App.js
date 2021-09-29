@@ -1,6 +1,7 @@
 import Header from './components/UI/header/Header';
 import './App.css';
 import HomePage from './screens/HomePage/HomePage';
+import SearchBar from './components/FilterComponents/searchbar/SearchBar';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Header /> 
       <HomePage />
+      <SearchBar />
     </div>
   );
 }
