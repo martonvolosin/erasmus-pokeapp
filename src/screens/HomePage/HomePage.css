@@ -1,0 +1,10 @@
+.page {
+    width: 70%;
+    font-family: Verdana;
+    margin: auto;
+    margin-top: 60px;
+}
+.left {
+    width: 50%;
+    float: left;
+}
