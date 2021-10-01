@@ -1,0 +1,9 @@
+.head {
+    font-family: Verdana;
+    color: grey;
+    padding-left: 10px;
+}
+.head td {
+    width: 150px;
+    height: 40px;
+}
