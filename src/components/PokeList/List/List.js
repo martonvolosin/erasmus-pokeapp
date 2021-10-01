@@ -6,10 +6,14 @@ import './List.css';
 
 function List(props) {
 
+    function detailsPoke(url) {
+        props.info(url);
+    }
+
     return(
         <ul className='pokeList'>
             {props.pokemon.map(poke => 
-            <Pokemon pokemon={poke} key={poke.id}/>)}
+            <Pokemon pokemon={poke} key={poke.id} info={detailsPoke}/>)}
         </ul>
     );
 };

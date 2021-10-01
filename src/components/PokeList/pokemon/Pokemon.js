@@ -15,7 +15,7 @@ function Pokemon(props) {
     return(
         <div className='poke'>
             <table className={line}>
-                <tr>
+                <tr onClick={() => props.info(props.pokemon.pokemon.url)}>
                     <td className='big'>{props.pokemon.pokemon.name}</td>
                     <td className='big'>{props.pokemon.type}</td>
                     <td>{statusText}</td>
