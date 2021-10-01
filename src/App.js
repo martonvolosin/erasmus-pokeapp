@@ -28,7 +28,8 @@ function App() {
     return {
       ...poke,
       status: false,
-      type: type
+      type: type,
+      id: Math.random().toString()
     }
   });
   setPokemon(transformedPokeArray);

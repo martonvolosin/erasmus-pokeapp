@@ -9,7 +9,7 @@ function List(props) {
     return(
         <ul className='pokeList'>
             {props.pokemon.map(poke => 
-            <Pokemon pokemon={poke} />)}
+            <Pokemon pokemon={poke} key={poke.id}/>)}
         </ul>
     );
 };
