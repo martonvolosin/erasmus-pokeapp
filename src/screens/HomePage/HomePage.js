@@ -18,6 +18,10 @@ function HomePage(props) {
         setFilterType(selectedType);
         props.load(selectedType);
     };
+
+    function detailsPoke(url) {
+        props.info(url)
+    }
  
     function collectCheck(checked) {
 
@@ -32,7 +36,7 @@ function HomePage(props) {
             </div>
             <div>
                 <ListHeader />
-                <List pokemon={props.pokemon}/>
+                <List pokemon={props.pokemon} info={detailsPoke}/>
             </div>
         </div>
     );

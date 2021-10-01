@@ -2,12 +2,18 @@ import Header from './components/UI/header/Header';
 import './App.css';
 import HomePage from './screens/HomePage/HomePage';
 import React, {useState} from 'react';
+import { Router, Route, Switch, useHistory} from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import Details from './screens/Details/details';
 
 let pokemons = [];
+const history = createBrowserHistory();
 
 function App() {
 
   const [pokemon, setPokemon] = useState(pokemons);
+
+  const [passUrl, setPassUrl] = useState();
 
   function loadPoke(type) {
     let url = '';
@@ -36,11 +42,27 @@ function App() {
   });
 }
 
+  function loadDetails(url){
+    console.log('At App.js with ' + url);
+    history.push('/details');
+    setPassUrl(url);
+  }
+  function loadBack() {
+    history.push('/');
+  }
+
   return (
-    <div>
+    <Router history={history}> 
       <Header /> 
-      <HomePage pokemon={pokemon} load={loadPoke}/>
-    </div>
+      <Switch>
+        <Route exact path='/details'>
+          <Details url={passUrl} back={loadBack}></Details>
+        </Route>
+        <Route exact path='/'>
+          <HomePage pokemon={pokemon} load={loadPoke} info={loadDetails}/>
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

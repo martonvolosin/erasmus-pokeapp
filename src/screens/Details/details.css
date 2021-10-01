@@ -1,0 +1,14 @@
+.page {
+    width: 70%;
+    font-family: Verdana;
+    margin: auto;
+    margin-top: 60px;
+}
+.page a{
+    color: rgb(100,100,100);
+    text-decoration: none;
+}
+.left {
+    width: 40%;
+    float: left;
+}
